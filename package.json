@@ -1,0 +1,23 @@
+{
+  "name": "playwright-typescript-framework-pom",
+  "version": "1.0.0",
+  "description": "When building a robust automation testing framework (e.g., with Playwright + TypeScript), the right npm packages can boost productivity, maintainability, and reporting. Below is a categorized list of recommended packages:",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gokul2172001/Playwright-Typescript-Framework-POM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Gokul2172001/Playwright-Typescript-Framework-POM/issues"
+  },
+  "homepage": "https://github.com/Gokul2172001/Playwright-Typescript-Framework-POM#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.1.0"
+  }
+}
