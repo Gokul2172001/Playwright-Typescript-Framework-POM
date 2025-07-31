@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "When building a robust automation testing framework (e.g., with Playwright + TypeScript), the right npm packages can boost productivity, maintainability, and reporting. Below is a categorized list of recommended packages:",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "cucumber-js test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Gokul2172001/Playwright-Typescript-Framework-POM.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gokul",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/Gokul2172001/Playwright-Typescript-Framework-POM#readme",
   "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
     "@playwright/test": "^1.54.1",
     "@types/node": "^24.1.0"
   }

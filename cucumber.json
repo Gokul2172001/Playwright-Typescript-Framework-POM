@@ -1,0 +1,15 @@
+{
+    "default": {
+        "paths": [
+            "src/test/feature/"
+        ],
+        "require": [
+
+        ],
+        "formatOptions": {
+            "snippetInterface":"async-await"
+        },
+        "dryrun": true,
+        "headless": false
+    }
+}
