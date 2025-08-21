@@ -10,5 +10,3 @@ Feature: Login Page
         When I enter valid username "user123" and password "pass123"
         And I click the login button
         Then I should be redirected to the dashboard page
-
-        
