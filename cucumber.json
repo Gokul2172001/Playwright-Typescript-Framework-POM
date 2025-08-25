@@ -10,6 +10,11 @@
             "snippetInterface":"async-await"
         },
         "dryrun": true,
-        "headless": false
+        "headless": false,
+        "format" :{
+            "progress-bar",
+            "json": "/reports/cucumber-report.json",
+            "html": "reports/cucumber-report.html"
+        }
     }
 }
