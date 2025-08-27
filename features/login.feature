@@ -2,7 +2,7 @@ Feature: Login Page
     As a user
     I want to log in to the application
     So that I can access my account
-    background:
+    Background: Navigate
         Given the application is running    
     
     Scenario: Successful login with valid credentials

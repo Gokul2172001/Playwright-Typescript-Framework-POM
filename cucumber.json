@@ -1,14 +1,19 @@
 {
     "default": {
         "paths": [
-            "src/test/feature/"
+            "features"
         ],
         "require": [
-
+            "src/steps/*.ts"
         ],
         "formatOptions": {
             "snippetInterface":"async-await"
         },
+        "format": [
+            "json:reports/cucumber.json",
+            "html:reports/cucumber.html",
+            "progress"
+        ],
         "dryrun": true,
         "headless": false
     }
