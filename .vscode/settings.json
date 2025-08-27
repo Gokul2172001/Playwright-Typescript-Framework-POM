@@ -5,5 +5,11 @@
   "editor.formatOnSave": true, // optional
   "editor.formatOnSaveMode": "file", // required to format on save
   "files.autoSave": "onFocusChange", // optional but recommended
-  "vs-code-prettier-eslint.prettierLast": false // set as "true" to run 'prettier' last not first
+  "vs-code-prettier-eslint.prettierLast": false, // set as "true" to run 'prettier' last not first
+  "github.copilot.enable": {
+    "*": false, // Enable for all files
+    "plaintext": false, // Disable for plaintext files
+    "markdown": false, // Disable for markdown files
+    "scminput": false // Disable for scm input
+  }
 }
