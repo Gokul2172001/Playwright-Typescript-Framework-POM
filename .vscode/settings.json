@@ -10,6 +10,8 @@
     "*": false, // Enable for all files
     "plaintext": false, // Disable for plaintext files
     "markdown": false, // Disable for markdown files
-    "scminput": false // Disable for scm input
+    "scminput": false, // Disable for scm input
+    "cucumberautocomplete.syncfeatures": "features",
+    "cucumberautocomplete.steps": ["src/steps/*.ts"]
   }
 }
