@@ -1,11 +1,10 @@
-import {After, AfterAll, Before, BeforeAll} from "@cucumber/cucumber";
+import { After, AfterAll, Before, BeforeAll } from "@cucumber/cucumber";
+BeforeAll(async function () {});
 
-BeforeAll (async (params:type) {
-    
-})
+Before(async function () {});
 
-Before
+Before(async function () {});
 
-After
+After(async function () {});
 
-AfterAll
+AfterAll(async function () {});
