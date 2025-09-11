@@ -1,7 +1,7 @@
 {
   "default": {
     "paths": ["features"],
-    "require": ["src/steps/*.ts"],
+    "require": ["src/steps/*.ts","src/support/common-hooks.ts"],
     "formatOptions": {
       "snippetInterface": "async-await"
     },
