@@ -5,7 +5,10 @@ Before(async function () {});
 
 Before(async function () {});
 
-After(async function () {});
+After(async function () {
+
+  await this.context?.close();
+});
 
 AfterAll(async function () {
   await browser.close();
