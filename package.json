@@ -1,31 +1,50 @@
 {
-  "name": "playwright-typescript-framework-pom",
+  "name": "playwriht-typescript-cucumber-ddd",
   "version": "1.0.0",
-  "description": "When building a robust automation testing framework (e.g., with Playwright + TypeScript), the right npm packages can boost productivity, maintainability, and reporting. Below is a categorized list of recommended packages:",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Gokul2172001/Playwright-Typescript-Framework-POM.git"
+	"old test": "cucumber-js --config cucumber.json --format json:./reports/cucumber-report.json || cmd /c exit 0",
+	"test": "node test-execution.js",
+    "test:tags": "cucumber-js --config cucumber.json",
+	"only": "npm run cucumber -- --tags @only",
+    "pretest": "npx ts-node src/support/pretest.ts",
+    "posttest": "npx ts-node src/support/report.ts",
+    "format": "prettier --write \"src/**/*.ts\" \"features/**/*.ts\"",
+    "allure:generate": "npx allure-commandline generate allure-results --clean -o allure-report",
+    "allure:open": "npx allure-commandline open allure-report"
   },
   "keywords": [],
-  "author": "Gokul",
+  "author": "Gokul E",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Gokul2172001/Playwright-Typescript-Framework-POM/issues"
-  },
-  "homepage": "https://github.com/Gokul2172001/Playwright-Typescript-Framework-POM#readme",
   "devDependencies": {
-    "@cucumber/cucumber": "^12.1.0",
-    "@playwright/test": "^1.54.1",
-    "@types/node": "^24.1.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "eslint": "^8.57.1",
-    "prettier": "^3.6.2",
-    "prettier-eslint": "^16.4.2",
-    "typescript": "^4.9.5"
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.55.0",
+    "@types/lodash.get": "^4.4.9",
+    "@types/lodash.has": "^4.5.9",
+    "@types/lodash.set": "^4.3.9",
+    "@types/lodash.unset": "^4.5.9",
+    "@types/node": "^24.3.0",
+    "allure-commandline": "^2.34.1",
+    "allure-cucumberjs": "^3.3.3",
+    "cross-env": "^10.0.0",
+    "cucumberjs-allure2-reporter": "^1.3.0",
+    "json-file": "0.1.0",
+    "multiple-cucumber-html-reporter": "^3.9.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "easyjson": "^0.1.2",
+    "eslint": "^9.34.0",
+	"fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "lodash.get": "^4.4.2",
+    "lodash.has": "^4.5.2",
+    "lodash.merge": "^4.6.2",
+    "lodash.set": "^4.3.2",
+    "lodash.unset": "^4.5.2",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.6.0"
   }
 }
