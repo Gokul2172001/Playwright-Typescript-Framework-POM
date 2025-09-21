@@ -1,17 +1,27 @@
 {
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-  "editor.formatOnType": false, // required
-  "editor.formatOnPaste": true, // optional
-  "editor.formatOnSave": true, // optional
-  "editor.formatOnSaveMode": "file", // required to format on save
-  "files.autoSave": "onFocusChange", // optional but recommended
-  "vs-code-prettier-eslint.prettierLast": false, // set as "true" to run 'prettier' last not first
-  "github.copilot.enable": {
-    "*": false, // Enable for all files
-    "plaintext": false, // Disable for plaintext files
-    "markdown": false, // Disable for markdown files
-    "scminput": false, // Disable for scm input
-    "cucumberautocomplete.syncfeatures": "features",
-    "cucumberautocomplete.steps": ["src/steps/*.ts"]
-  }
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "js/ts.implicitProjectConfig.experimentalDecorators": false,
+  "editor.formatOnSave": true,
+  "playwright.reuseBrowser": true,
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.dontShowNewVersionMessage": true,
+  "cucumber.features": [
+    "features/*.feature"
+  ],
+  "cucumber.glue": [
+    "src/steps/*.ts"
+  ],
+  "vs-code-prettier-eslint.prettierLast": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "redhat.telemetry.enabled": true,
+  "cucumberautocomplete.pages": {},
+  "cucumberautocomplete.customParameters": [],
+  "cucumberautocomplete.steps": [
+    "src/steps/**/*.ts",
+    "src/steps/**/**/*.ts"
+  ],
+  "cucumberautocomplete.syncfeatures": "test/features/*.feature",
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
