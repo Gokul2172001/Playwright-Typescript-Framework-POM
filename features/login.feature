@@ -5,6 +5,7 @@ Feature: Login Page
     Background: Navigate
         Given the application is running    
     
+    @here
     Scenario: Successful login with valid credentials
         Given I am on the login page
         When I enter valid username "user123" and password "pass123"
