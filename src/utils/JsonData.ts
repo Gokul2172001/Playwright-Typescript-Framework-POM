@@ -17,4 +17,8 @@ export class JsonData {
     set(path: string, value: string): void {
         set(this.data, path, value);
     }
+
+    toJson(): any {
+        return this.data;
+    }
 }
