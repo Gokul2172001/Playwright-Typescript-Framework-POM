@@ -3,6 +3,7 @@ import get from 'lodash.get'
 import set from 'lodash.set'
 
 export class JsonData {
+    
     private data: any;
     private readonly OriginalData: any;
 
