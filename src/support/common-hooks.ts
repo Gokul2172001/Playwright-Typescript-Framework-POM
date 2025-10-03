@@ -106,6 +106,7 @@ Before({ tags: '@ignore' }, async function () {
 // import { attachVideo } from '../utils/attachVideo'; // make sure the import path is correct
 
 After(async function (this: ICustomWorld, { result }: ITestCaseHookParameter) {
+  if(!IS_API)
   if (!this.page || !this.context) return;
 
   const testPassed = result?.status === Status.PASSED;
