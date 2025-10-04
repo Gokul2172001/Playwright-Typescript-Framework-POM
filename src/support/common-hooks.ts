@@ -76,20 +76,22 @@ Before(async function (this: ICustomWorld, { pickle }: ITestCaseHookParameter) {
   this.startTime = new Date();
   setStartTime(this.startTime)
   this.testName = pickle.name.replace(/\W/g, '-');
-  this.context = await browser.newContext({
-    acceptDownloads: true,
-    recordVideo: {
-      dir: 'reports/videos/', // where videos will be saved
-      size: { width: 1280, height: 720 },
-    },
-    viewport: { width: 1920, height: 1080 },
-  });
-  await this.context.tracing.start({ screenshots: true, snapshots: true });
-  this.page = await this.context.newPage();
-  this.page.on('console', async (msg: ConsoleMessage) => {
-    if (msg.type() == 'log') await this.attach(msg.text());
-  });
+  if (IS_API) {
+    this.context = await browser.newContext({
+      acceptDownloads: true,
+      recordVideo: {
+        dir: 'reports/videos/', // where videos will be saved
+        size: { width: 1280, height: 720 },
+      },
+      viewport: { width: 1920, height: 1080 },
+    });
+    await this.context.tracing.start({ screenshots: true, snapshots: true });
+    this.page = await this.context.newPage();
 
+    this.page.on('console', async (msg: ConsoleMessage) => {
+      if (msg.type() == 'log') await this.attach(msg.text());
+    });
+  }
   this.feature = pickle;
 
 });
