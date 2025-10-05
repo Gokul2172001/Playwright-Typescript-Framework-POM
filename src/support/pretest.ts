@@ -33,7 +33,6 @@ if (require.main === module) {
     }
 }
 
-
 function loadJson(filePath: string): any {
     if (!fs.existsSync(filePath)) {
         fs.writeFileSync(filePath, JSON.stringify({}, null, 2));
@@ -107,4 +106,3 @@ function main() {
     const outputPath = path.join(baseDir, 'test-data/data.json');
     fs.writeFileSync(outputPath, JSON.stringify(merged, null, 2), 'utf-8');
 }
-
