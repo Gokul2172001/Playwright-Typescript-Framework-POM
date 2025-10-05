@@ -3,9 +3,9 @@ import path from 'path';
 import { JsonData } from './../utils/JsonData';
 
 export const updateCucumberReport = (): void => {
+    
     const reportFilePath = path.resolve('./reports/cucumber-json.json');
     const testDataPath = path.resolve('./src/data/test-data/data.json');
-
     const value = new JsonData(
         JSON.parse(fs.readFileSync(testDataPath, 'utf8'))
     );
