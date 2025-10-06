@@ -77,6 +77,7 @@ function mergeJsonFolder(folderPath: string): object {
 }
 
 function main() {
+    
     const baseDir = path.resolve(process.cwd(), 'src/data/');
 
     // const filesToMerge = [
