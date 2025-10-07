@@ -14,7 +14,6 @@ export const updateCucumberReport = (): void => {
 
     for (const feature of reportData) {
         for (const element of feature.elements || []) {
-            // ✅ Step 1: Handle ":-" split format in element.name
             if (element.name.includes(':-')) {
                 const [prefix, key] = element.name.split(':-');
                 const trimmedKey = key.trim();
