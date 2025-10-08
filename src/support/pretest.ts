@@ -29,7 +29,7 @@ if (require.main === module) {
             warn('> ℹ️  Preconfiguration Interrupted:', e);
         }
     } else {
-        console.log("> ✔️ | Preconfigurations Already Completed.");
+        console.log("> ✔️ | Preconfigurations are Already Completed.");
     }
 }
 
