@@ -24,12 +24,12 @@ if (require.main === module) {
             setData();
             setInformations();
             main();
-            console.log("> ✔️ | Preconfigurations Completed.");
+            console.log("> ✔️ | Preconfigurations are Completed.");
         } catch (e) {
-            warn('> ℹ️  Preconfiguration Interrupted:', e);
+            warn('> ℹ️  Preconfigurations got Interrupted:', e);
         }
     } else {
-        console.log("> ✔️ | Preconfigurations are Already Completed.");
+        console.log("> ✔️ | Preconfigurations were Already Completed.");
     }
 }
 
