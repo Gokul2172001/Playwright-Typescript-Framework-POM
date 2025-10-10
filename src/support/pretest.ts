@@ -6,7 +6,6 @@ import path from "path";
 import { setInformations } from "../utils/infoGen";
 import { warn } from "console";
 
-
 export function getDynamicJson() {
     const easyjson = require("easyjson");
     return easyjson.path("./src/data/dynamic-data/dynamic.json");
