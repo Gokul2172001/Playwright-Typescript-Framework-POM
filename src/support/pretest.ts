@@ -17,7 +17,6 @@ export function getInfoJson() {
 }
 
 if (require.main === module) {
-    // This code only runs in the main process, not in the spawned subprocess.
     if (dynamic.Executed != new Date().getDate().toString()) {
         try {
             setData();
