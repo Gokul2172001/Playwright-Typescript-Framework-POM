@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { ICustomWorld } from '../config/custom-world';
+
 import {
   AfterAll,
   Before,
@@ -10,6 +11,7 @@ import {
   ITestCaseHookParameter,
   Status,
 } from '@cucumber/cucumber';
+
 import {
   Browser,
   chromium,
@@ -22,6 +24,7 @@ import {
   webkit,
   WebKitBrowser,
 } from '@playwright/test';
+
 import { BROWSER } from '../config/env';
 import { attachVideo } from '../utils/attachVideo';
 import { browserOptions } from '../config/browserOption';
@@ -44,16 +47,19 @@ BeforeAll(async function () {
           setBrowserName('Firefox')
           setBrowserVersion(browser.version())
           break;
+          
         case 'WEBKIT':
           browser = await webkit.launch(browserOptions);
           setBrowserName('Webkit')
           setBrowserVersion(browser.version())
           break;
+          
         case 'CHROMIUM':
           browser = await chromium.launch(browserOptions);
           setBrowserName('Chrome')
           setBrowserVersion(browser.version());
           break;
+          
         default:
           console.log("**** Chromium being opened as a default browser ****");
           browser = await chromium.launch(browserOptions);
