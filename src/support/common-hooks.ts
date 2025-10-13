@@ -86,7 +86,7 @@ Before(async function (this: ICustomWorld, { pickle }: ITestCaseHookParameter) {
     this.context = await browser.newContext({
       acceptDownloads: true,
       recordVideo: {
-        dir: 'reports/videos/', // where videos will be saved
+        dir: 'reports/videos/',
         size: { width: 1280, height: 720 },
       },
       viewport: { width: 1920, height: 1080 },
@@ -130,10 +130,9 @@ After(async function (this: ICustomWorld, { result }: ITestCaseHookParameter) {
     });
   }
 
-  // Close page and context after screenshot and before attaching video
   await this.page.close();
   await this.context.close();
-  // Attach renamed & playable video
+  
   let endTime = new Date();
   setEndTime(endTime)
   setTotalExecutionTime(formatDuration(this.startTime, endTime))
