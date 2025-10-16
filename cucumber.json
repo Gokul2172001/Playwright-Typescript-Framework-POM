@@ -10,6 +10,7 @@
       "html:reports/cucumber.html",
       "progress-bar"
     ],
+    "parralel": 2,
     "dryrun": true,
     "headless": false
   }
