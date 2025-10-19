@@ -6,7 +6,6 @@ import path from "path";
 import { setInformations } from "../utils/infoGen";
 import { warn } from "console";
 
-
 export function getDynamicJson() {
     const easyjson = require("easyjson");
     return easyjson.path("./src/data/dynamic-data/dynamic.json");
@@ -18,21 +17,19 @@ export function getInfoJson() {
 }
 
 if (require.main === module) {
-    // This code only runs in the main process, not in the spawned subprocess.
     if (dynamic.Executed != new Date().getDate().toString()) {
         try {
             setData();
             setInformations();
             main();
-            console.log("> ✔️ | Preconfigurations Completed.");
+            console.log("> ✔️ | Preconfigurations are Completed.");
         } catch (e) {
-            warn('> ℹ️  Preconfiguration Interrupted:', e);
+            warn('> ℹ️  Preconfigurations got Interrupted:', e);
         }
     } else {
-        console.log("> ✔️ | Preconfigurations Already Completed.");
+        console.log("> ✔️ | Preconfigurations were Already Completed.");
     }
 }
-
 
 function loadJson(filePath: string): any {
     if (!fs.existsSync(filePath)) {
@@ -78,6 +75,7 @@ function mergeJsonFolder(folderPath: string): object {
 }
 
 function main() {
+    
     const baseDir = path.resolve(process.cwd(), 'src/data/');
 
     // const filesToMerge = [
@@ -107,4 +105,3 @@ function main() {
     const outputPath = path.join(baseDir, 'test-data/data.json');
     fs.writeFileSync(outputPath, JSON.stringify(merged, null, 2), 'utf-8');
 }
-

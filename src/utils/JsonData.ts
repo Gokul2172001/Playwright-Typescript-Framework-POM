@@ -28,3 +28,4 @@ export class JsonData {
         return this.data;
     }
 }
+

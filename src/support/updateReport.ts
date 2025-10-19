@@ -3,9 +3,9 @@ import path from 'path';
 import { JsonData } from './../utils/JsonData';
 
 export const updateCucumberReport = (): void => {
+    
     const reportFilePath = path.resolve('./reports/cucumber-json.json');
     const testDataPath = path.resolve('./src/data/test-data/data.json');
-
     const value = new JsonData(
         JSON.parse(fs.readFileSync(testDataPath, 'utf8'))
     );
@@ -14,7 +14,6 @@ export const updateCucumberReport = (): void => {
 
     for (const feature of reportData) {
         for (const element of feature.elements || []) {
-            // ✅ Step 1: Handle ":-" split format in element.name
             if (element.name.includes(':-')) {
                 const [prefix, key] = element.name.split(':-');
                 const trimmedKey = key.trim();

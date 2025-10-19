@@ -6,7 +6,6 @@ export async function attachVideo(this: ICustomWorld, testPassed: boolean) {
     const video = this.page?.video();
     if (!video) return;
 
-    // Get original video path
     const originalVideoPath = await video.path();
 
     // Wait for video file to be written before reading
