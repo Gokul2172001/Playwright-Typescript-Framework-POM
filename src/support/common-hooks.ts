@@ -25,6 +25,7 @@ import {
 import { BROWSER } from '../config/env';
 import { attachVideo } from '../utils/attachVideo';
 import { browserOptions } from '../config/browserOption';
+// import { setBrowserName, setBrowserVersion, setEndTime, setInformations, setStartTime, setTotalExecutionTime } from '../utils/infoGen';
 import { setBrowserName, setBrowserVersion, setEndTime, setInformations, setStartTime, setTotalExecutionTime } from '../utils/infoGen';
 import { formatDuration } from '../config/info';
 
@@ -108,15 +109,15 @@ Before({ tags: '@ignore' }, async function () {
 // import { attachVideo } from '../utils/attachVideo'; // make sure the import path is correct
 
 After(async function (this: ICustomWorld, { result }: ITestCaseHookParameter) {
-  if(!IS_API)
-  if (!this.page || !this.context) return;
+  if (!IS_API)
+    if (!this.page || !this.context) return;
 
   const testPassed = result?.status === Status.PASSED;
 
   if (!testPassed) {
-    const screenshot = await this.page.screenshot();
-    await this.attach(screenshot, 'image/png');
-
+    let screenshot = await this.page?.screenshot();
+    if (screenshot)
+      this.attach(screenshot, 'image/png');
     const timePart = this.startTime?.toISOString().split('.')[0].replaceAll(':', '_');
 
     await this.context?.tracing.stop({
@@ -125,12 +126,13 @@ After(async function (this: ICustomWorld, { result }: ITestCaseHookParameter) {
   }
 
   // Close page and context after screenshot and before attaching video
-  await this.page.close();
-  await this.context.close();
-  // Attach renamed & playable video
+  await this.page?.close();
+  await this.context?.close();
+
   let endTime = new Date();
   setEndTime(endTime)
   setTotalExecutionTime(formatDuration(this.startTime, endTime))
+
   await attachVideo.call(this, testPassed);
 });
 
