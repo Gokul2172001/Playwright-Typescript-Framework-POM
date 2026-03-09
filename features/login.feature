@@ -3,8 +3,8 @@ Feature: Login Page
     I want to log in to the application
     So that I can access my account
     Background: Navigate
-        Given the application is running    
-    
+        Given the application is running
+
     @here
     Scenario: Successful login with valid credentials
         Given I am on the login page
