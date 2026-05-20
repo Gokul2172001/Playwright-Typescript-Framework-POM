@@ -4,7 +4,7 @@ export class LoginPage {
   constructor(private page: Page) {}
 
   async navigate() {
-    await this.page.goto('https://example.com/login');
+    await this.page.goto('https://orangehrm.com/login');
   }
 
   async login(username: string, password: string) {
@@ -13,3 +13,4 @@ export class LoginPage {
     await this.page.click('#login');
   }
 }
+
