@@ -5,8 +5,7 @@
   "directories": {
     "doc": "docs"
   },
-  "scripts": 
-  {
+  "scripts":  {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -21,8 +20,7 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "^6.0.3"
   },
-  "dependencies": 
-  {
+  "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0"
   }
 }
