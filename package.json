@@ -19,8 +19,7 @@
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^6.0.3"
-  },
-  
+  }, 
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0"
   }
