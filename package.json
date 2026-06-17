@@ -7,8 +7,7 @@
   },
   "scripts":  {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  },  "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
@@ -19,8 +18,7 @@
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^6.0.3"
-  }, 
-  "dependencies": {
+  },  "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0"
   }
 }
